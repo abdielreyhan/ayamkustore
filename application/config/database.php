@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> 'ayamkustore',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => '',
+	'dsn'	=> '',
+	'hostname' => 'dinusheroes.xyz',
+	'username' => 'dinusheroes',
+	'password' => 'OrderHarits123',
+	'database' => 'dinusher_testing',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
