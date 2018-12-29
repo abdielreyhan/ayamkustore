@@ -30,7 +30,7 @@
 <!-- FastClick -->
 <script src="<?php echo base_url('asset/Gerai/'); ?>plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<script src="<?php echo base_url('asset/Gerai/'); ?>dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url('asset/Gerai/'); ?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
