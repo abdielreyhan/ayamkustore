@@ -44,7 +44,7 @@ class Admin_model extends CI_Model
               $this->ftp->close();
               
               //Delete file from local server
-              @unlink($source);
+              @unlink($sourche);
               // Jika berhasil :
               $return = array('result' => 'success', 'file' => $this->upload->data(), 'link' => 'http://dinusheroes.xyz/Ayamku/asset/produk');
               return $return;
