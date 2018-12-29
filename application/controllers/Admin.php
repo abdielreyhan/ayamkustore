@@ -18,15 +18,24 @@ class Admin extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Admin_model');
+	}
 
 	public function index()
 	{
 		$this->load->view('admin/dashboard');
 	}
+
 	public function Daftar_Gerai()
 	{
-		$this->load->view('admin/Daftar_Gerai');
+		$data=$this->Admin_model->tampilbarang();
+		$data=array('data'=>$data);
+		$this->load->view('admin/Daftar_Gerai',$data);
 	}
+
 	public function Tambah_Gerai()
 	{
 		$this->load->view('admin/Tambah_Gerai');
@@ -35,5 +44,41 @@ class Admin extends CI_Controller {
 	public function Tambah_Produk()
 	{
 		$this->load->view('admin/Tambah_Produk');
+	}
+
+	public function prosestambahproduk()
+	{
+		$data=array();
+		if($this->input->post('submit')) // Jika user menekan tombol Submit (Simpan) pada form
+			{ 
+			  // lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+			  $upload = $this->Admin_model->upload();
+			  
+			  	if($upload['result'] == "success") // Jika proses upload sukses
+			  	{ 
+					 // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
+					$this->Admin_model->save($upload);
+					$this->session->set_flashdata('success', 'Tambah Produk Berhasil');
+					redirect(base_url('Admin'));	
+				}
+				else
+				{
+					$this->session->set_flashdata('error', 'Gagal Menambahkan');	
+					redirect(base_url('Admin/Tambah_Produk'));	
+				}
+
+				
+			  }
+			//   else{ // Jika proses upload gagal
+			// 	$data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+			//   }
+		
+	}
+
+	public function Daftar_Produk()
+	{
+		$data=$this->Admin_model->tampilbarang();
+		$data=array('data'=>$data);
+		$this->load->view('admin/Daftar_Produk',$data);
 	}
 }

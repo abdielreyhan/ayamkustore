@@ -47,40 +47,38 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form">
+              <!-- <form role="form" method="post" action="<?php echo base_url('Admin/prosestambahproduk'); ?>"> -->
+              <?php echo form_open("Admin/prosestambahproduk", array('enctype'=>'multipart/form-data')); ?>
               <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Id Produk</label>
-                    <input type="text" class="form-control" id="NamaGerai" placeholder="Enter Id">
+                    <input type="text" class="form-control" name="kdbrg" placeholder="Enter Id">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Produk</label>
-                    <input type="text" class="form-control" id="NamaGerai" placeholder="Enter Name">
+                    <input type="text" class="form-control" name="Namaproduk" placeholder="Enter Name">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Harga</label>
-                    <input type="text" class="form-control" id="Pass" placeholder="Harga">
+                    <input type="text" class="form-control" name="harga" placeholder="Harga">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Deskripsi</label>
-                    <input type="text" class="form-control" id="Pass1" placeholder="Deskripsi Produk">
+                    <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi Produk">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Gambar Produk</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                    </div>
+                    <h3>Foto Produk</h3>
+                    <small>200x200 bertipe jpg,png,jpeg</small>
+                    <input type="file" class="form-control" name="input_gambar">
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" name="submit" value="upload" class="btn btn-primary">Submit</button>
                 </div>
-              </form>
+              <!-- </form> -->
+              <?php echo form_close(); ?>
             </div>
             <!-- /.card -->
           </div>
