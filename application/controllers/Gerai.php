@@ -22,5 +22,15 @@ class Gerai extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('Gerai/index');
+    }
+
+    public function Lihat_Produk()
+	{
+		$this->load->view('Gerai/Lihat_Produk');
+    }
+
+    public function Tambah_Produk()
+	{
+		$this->load->view('Gerai/Tambah_Produk');
 	}
 }

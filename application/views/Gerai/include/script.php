@@ -35,3 +35,6 @@
 <script src="<?php echo base_url('asset/Gerai/'); ?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('asset/Gerai/'); ?>dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url('asset/Gerai/');?>plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url('asset/Gerai/');?>plugins/datatables/dataTables.bootstrap4.min.js"></script>

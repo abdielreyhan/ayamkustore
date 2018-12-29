@@ -22,3 +22,5 @@
   <link rel="stylesheet" href="<?php echo base_url('asset/Gerai/'); ?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url('asset/Gerai/');?>plugins/datatables/dataTables.bootstrap4.min.css">
