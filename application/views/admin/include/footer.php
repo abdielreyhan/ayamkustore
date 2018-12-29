@@ -1,7 +1,7 @@
- <!-- To the right -->
- <div class="float-right d-sm-none d-md-block">
-      Anything you want
-</div>
-
-<!-- Default to the left -->
-<strong>Copyright &copy; 2014-2018 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+<footer class="main-footer">
+    <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.0-alpha
+    </div>
+  </footer>
