@@ -35,3 +35,6 @@
 <script src="<?php echo base_url('asset/');?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('asset/');?>dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url('asset/');?>plugins/datatables/jquery.dataTables.js"></script>
+<script src="<?php echo base_url('asset/');?>plugins/datatables/dataTables.bootstrap4.js"></script>
