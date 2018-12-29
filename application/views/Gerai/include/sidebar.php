@@ -41,12 +41,6 @@
                   <p>Daftar Produk</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('Gerai/Tambah_Produk');?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Tambah Produk</p>
-                </a>
-              </li>
             </ul>
           </li>
           <li class="nav-item">

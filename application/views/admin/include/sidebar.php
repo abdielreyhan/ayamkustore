@@ -49,6 +49,12 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('Admin/Tambah_Produk')?>" class="nav-link">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>Tambah Produk</p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

@@ -7,11 +7,11 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <!-- Navbar -->
-    <?php $this->load->view('Gerai/include/navbar');?>
+    <?php $this->load->view('admin/include/navbar');?>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <?php $this->load->view('Gerai/include/sidebar');?>
+    <?php $this->load->view('admin/include/sidebar');?>
     <!-- /.sidebar -->
 
 
@@ -48,7 +48,11 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form">
-                <div class="card-body">
+              <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Id Produk</label>
+                    <input type="text" class="form-control" id="NamaGerai" placeholder="Enter Id">
+                  </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Produk</label>
                     <input type="text" class="form-control" id="NamaGerai" placeholder="Enter Name">
@@ -58,7 +62,7 @@
                     <input type="text" class="form-control" id="Pass" placeholder="Harga">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Re-Password</label>
+                    <label for="exampleInputPassword1">Deskripsi</label>
                     <input type="text" class="form-control" id="Pass1" placeholder="Deskripsi Produk">
                   </div>
                   <div class="form-group">
@@ -88,7 +92,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <?php $this->load->view('Gerai/include/footer');?>
+  <?php $this->load->view('admin/include/footer');?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -98,6 +102,6 @@
 </div>
 <!-- ./wrapper -->
 
-<?php $this->load->view('Gerai/include/script');?>
+<?php $this->load->view('admin/include/javascript');?>
 </body>
 </html>
