@@ -51,24 +51,36 @@
               <?php echo form_open("Admin/prosestambahproduk", array('enctype'=>'multipart/form-data')); ?>
               <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Id Produk</label>
-                    <input type="text" class="form-control" name="kdbrg" placeholder="Enter Id">
+                    <label for="exampleInputEmail1">Kode Barang</label>
+                    <input type="text" class="form-control" name="kdbrg" placeholder="Enter Kode">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Produk</label>
                     <input type="text" class="form-control" name="Namaproduk" placeholder="Enter Name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Harga</label>
-                    <input type="text" class="form-control" name="harga" placeholder="Harga">
+                    <label for="exampleInputPassword1">Satuan</label>
+                    <input type="text" class="form-control" name="satuan" placeholder="Kg,Buah,Berat">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Deskripsi</label>
                     <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi Produk">
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">Harga</label>
+                    <input type="text" class="form-control" name="harga" placeholder="Harga Produk">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Stock</label>
+                    <input type="text" class="form-control" name="stock" placeholder="Stock Produk">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Stock Minimal</label>
+                    <input type="text" class="form-control" name="stock_min" placeholder="Stock Minimal Produk">
+                  </div>
+                  <div class="form-group">
                     <h3>Foto Produk</h3>
-                    <small>200x200 bertipe jpg,png,jpeg</small>
+                    <small>300x300 bertipe jpg,png,jpeg</small>
                     <input type="file" class="form-control" name="input_gambar">
                   </div>
                 </div>

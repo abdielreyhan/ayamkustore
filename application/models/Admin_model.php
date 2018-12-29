@@ -12,9 +12,12 @@ class Admin_model extends CI_Model
           $config['upload_path']   = './asset/produk/';
           $config['allowed_types'] = 'jpg|png|jpeg';
           $config['max_size']      = '2048';
-          $config['max_width']     = 200;
-          $config['max_height']    = 200;
-       
+          $config['max_width']     = 300;
+          $config['max_height']    = 300;
+          $config['remove_space'] = TRUE;
+          $config['encrypt_name'] = TRUE;
+
+        
           $this->load->library('upload', $config); // Load konfigurasi uploadnya
           if($this->upload->do_upload('input_gambar')) // Lakukan upload dan Cek jika proses upload berhasil
           { 
@@ -63,12 +66,11 @@ class Admin_model extends CI_Model
         $data = array(
         'kd_brg' => $this->input->post('kdbrg'),
         'nm_brg' => $this->input->post('Namaproduk'),
-        'satuan' => $this->input->post('Namaproduk'),
+        'satuan' => $this->input->post('satuan'),
         'deskripsi' => $this->input->post('deskripsi'),
         'harga' => $this->input->post('harga'),
-        'stok' => $this->input->post('harga'),
-        'stok_min' => $this->input->post('harga'),
-        'deskripsi' => $this->input->post('deskripsi'),
+        'stok' => $this->input->post('stock'),
+        'stok_min' => $this->input->post('stock_min'),
         'image' => $link
         );
         
