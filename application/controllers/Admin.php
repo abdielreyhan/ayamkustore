@@ -27,4 +27,8 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/Daftar_Gerai');
 	}
+	public function Tambah_Gerai()
+	{
+		$this->load->view('admin/Tambah_Gerai');
+	}
 }

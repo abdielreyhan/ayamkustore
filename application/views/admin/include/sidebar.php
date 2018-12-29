@@ -42,7 +42,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="<?php echo base_url('Admin/Tambah_Gerai')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Tambah Gerai</p>
                 </a>
