@@ -47,28 +47,31 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form">
+              <?php echo form_open("Admin/prosestambahgerai", array('enctype'=>'multipart/form-data')); ?>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Gerai</label>
-                    <input type="text" class="form-control" id="NamaGerai" placeholder="Enter Name">
+                    <label for="exampleInputEmail1">User Name</label>
+                    <input type="text" class="form-control" name="NamaGerai" placeholder="Enter Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter email">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="Pass" placeholder="Password">
+                    <input type="password" class="form-control" name="Pass" placeholder="Password">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Re-Password</label>
-                    <input type="password" class="form-control" id="Pass1" placeholder="Re Password">
+                    <input type="password" class="form-control" name="Pass1" placeholder="Re Password">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Image Profile</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                    </div>
+                    <label for="exampleInputEmail1">Nomor Telepon</label>
+                    <input type="text" class="form-control" name="tlp" placeholder="Enter Nomor Telp">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Lokasi</label>
+                    <input type="text" class="form-control" name="lokasi" placeholder="Enter Location">
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -76,7 +79,7 @@
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-              </form>
+                <?php echo form_close(); ?>
             </div>
             <!-- /.card -->
           </div>

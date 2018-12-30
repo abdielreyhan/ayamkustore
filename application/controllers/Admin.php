@@ -44,6 +44,19 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/Daftar_Gerai',$data);
 	}
 
+	public function prosestambahgerai()
+	{
+		if ($this->input->post('Pass') == $this->input->post('Pass1'))
+		{
+			$this->Admin_model->savegerai();
+			redirect('admin/Daftar_Gerai');
+		}
+		else
+		{
+			$this->load->view('admin/Tambah_Gerai');
+		}
+	}
+
 	public function Tambah_Gerai()
 	{
 		$this->load->view('admin/Tambah_Gerai');

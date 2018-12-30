@@ -77,6 +77,20 @@ class Admin_model extends CI_Model
         $this->db->insert('barang', $data);
     }
 
+    public function savegerai()
+    {
+        $data = array(
+            'username' => $this->input->post('NamaGerai'),
+            'email' => $this->input->post('email'),
+            'password' =>md5( $this->input->post('Pass')),
+            'no_tlp' => $this->input->post('tlp'),
+            'lokasi' => $this->input->post('lokasi'),
+            'hak_akses' => '0'
+            );
+            
+            $this->db->insert('user', $data);
+    }
+
     public function tampilbarang()
     {
         $this->db->select('*');
