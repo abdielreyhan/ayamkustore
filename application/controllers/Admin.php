@@ -26,7 +26,14 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin/dashboard');
+		if($this->session->userdata('status')=='Login'){
+			
+			$this->load->view('admin/dashboard');
+		}
+		else
+		{
+			redirect('Login');
+		}
 	}
 
 	public function Daftar_Gerai()
@@ -95,4 +102,11 @@ class Admin extends CI_Controller {
 			redirect(base_url('Admin/Daftar_Produk'));
 		}
 	}
+
+	public function Logout()
+	{
+		$this->session->sess_destroy();
+		redirect(base_url('Login'));
+	}
 }
+?>

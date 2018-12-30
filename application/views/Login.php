@@ -12,13 +12,13 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your Ayam</p>
 
-      <form action="../../index2.html" method="post">
+      <form action="<?php echo base_url('Login/LoginProses'); ?>" method="post">
         <div class="form-group has-feedback">
-          <input type="text" class="form-control" placeholder="UserId">
+          <input type="text" name="user" class="form-control" placeholder="UserId">
           <span class="fa fa-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="pass" class="form-control" placeholder="Password">
           <span class="fa fa-lock form-control-feedback"></span>
         </div>
         <div class="row">

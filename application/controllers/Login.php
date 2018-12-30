@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Login_Model');
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -22,5 +27,31 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('Login');
+	}
+
+	public function LoginProses()
+	{
+		$username=$this->input->post('user');
+		$password=$this->input->post('pass');
+
+		$where=array(
+			'username'=>$username,
+			'password'=>md5($password)
+		);
+		$cek=$this->Login_Model->Login('user',$where)->num_rows();
+
+		if($cek>0)
+		{
+			$data_session=array(
+				'username'=>$username,
+				'status'=>'Login'
+			);
+			$this->session->set_userdata($data_session);
+			redirect(base_url('Admin'));
+		}
+		else
+		{
+			redirect(base_url('Login'));
+		}
 	}
 }
