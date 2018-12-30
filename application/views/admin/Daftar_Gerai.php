@@ -46,31 +46,28 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <th>No Telepone</th>
+                  <th>Lokasi</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach($data as $produk){ ?>
+                <?php foreach($data as $gerai){ ?>
                 <tr>
-                  <td><?php echo $produk['id']; ?></td>
-                  <td><?php echo $produk['kd_brg']; ?></td>
-                  <td><?php echo $produk['nm_brg']; ?></td>
-                  <td> <?php echo $produk['harga']; ?></td>
-                  <td><?php echo $produk['deskripsi']; ?></td>
+                  <td><?php echo $gerai['username']; ?></td>
+                  <td><?php echo $gerai['email']; ?></td>
+                  <td><?php echo $gerai['no_tlp']; ?></td>
+                  <td> <?php echo $gerai['lokasi']; ?></td>
                 </tr>
                 <?php }?>
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <th>No Telepone</th>
+                  <th>Lokasi</th>
                 </tr>
                 </tfoot>
               </table>

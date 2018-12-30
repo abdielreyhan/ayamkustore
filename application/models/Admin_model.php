@@ -86,6 +86,11 @@ class Admin_model extends CI_Model
         return $query->result_array();
     }
 
+    public function tampilgerai($table,$where)
+    {
+        $query = $this->db->get_where($table,$where);
+        return $query->result_array();
+    }
     public function hapusproduk($table,$id)
     {
 

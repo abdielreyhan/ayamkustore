@@ -38,7 +38,8 @@ class Admin extends CI_Controller {
 
 	public function Daftar_Gerai()
 	{
-		$data=$this->Admin_model->tampilbarang();
+		$where = array('hak_akses' => '0');
+		$data=$this->Admin_model->tampilgerai('user',$where);
 		$data=array('data'=>$data);
 		$this->load->view('admin/Daftar_Gerai',$data);
 	}
@@ -84,6 +85,7 @@ class Admin extends CI_Controller {
 
 	public function Daftar_Produk()
 	{
+		
 		$data=$this->Admin_model->tampilbarang();
 		$data=array('data'=>$data);
 		$this->load->view('admin/Daftar_Produk',$data);
