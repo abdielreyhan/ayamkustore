@@ -86,4 +86,11 @@ class Admin_model extends CI_Model
         return $query->result_array();
     }
 
+    public function hapusproduk($table,$id)
+    {
+
+         $this->db->where($id);
+        $res=$this->db->delete($table);
+        return $res;
+    }
 }

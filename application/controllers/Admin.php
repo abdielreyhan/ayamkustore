@@ -81,4 +81,18 @@ class Admin extends CI_Controller {
 		$data=array('data'=>$data);
 		$this->load->view('admin/Daftar_Produk',$data);
 	}
+
+	public function hapusproduk($id)
+	{
+		$where = array('kd_brg' => $id);
+		$data=$this->Admin_model->hapusproduk('barang',$where);
+		if($data){
+			$this->session->set_flashdata('success', 'BERHASIL MENGHAPUS');
+			redirect(base_url('Admin/Daftar_Produk'));
+		}
+		else{
+			$this->session->set_flashdata('error', 'GAGAL MENGHAPUS');
+			redirect(base_url('Admin/Daftar_Produk'));
+		}
+	}
 }

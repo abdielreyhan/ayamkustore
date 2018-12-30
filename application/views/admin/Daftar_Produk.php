@@ -46,33 +46,30 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Kode Barang</th>
+                  <th>Picture</th>
+                  <th>Nama Barang</th>
+                  <th>Harga</th>
+                  <th>Stock</th>
+                  <th>Deskripsi</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach($data as $produk){ ?>
                 <tr>
-                  <td><?php echo $produk['id']; ?></td>
                   <td><?php echo $produk['kd_brg']; ?></td>
+                  <td><img src="<?php echo $produk['image']; ?>" width="100" height="100"></td>
                   <td><?php echo $produk['nm_brg']; ?></td>
                   <td> <?php echo $produk['harga']; ?></td>
+                  <td><?php echo $produk['stok']; ?></td>
                   <td><?php echo $produk['deskripsi']; ?></td>
+                  <td> 
+                  <a href="<?php echo base_url();?>Admin/hapusproduk/<?php echo $produk['kd_brg'];?>" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="ture"></i></a>
+                  </td>
                 </tr>
                 <?php }?>
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </tfoot>
               </table>
             </div>
             <!-- /.card-body -->
